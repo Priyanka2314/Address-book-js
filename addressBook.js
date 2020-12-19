@@ -147,10 +147,21 @@ try{
     //displaying contactdetails after being updated
     contactDetailsArray.forEach((updated) => console.log(updated.toString()));
 
-    //UC5 to find a person with name and delete it from array
-    console.log("===================================");
+    //UC5 find a person with name and delete it from array
+    console.log("====================================");
     contactDetailsArray.splice(pos,1);
     contactDetailsArray.forEach((contact) => console.log("contact after being deleted: "+contact.toString()));
+
+    //UC6 find number of contacts in the address book
+    let totalContacts=0;
+    function findTotalConnection(contactDetailsArray){
+        if(contactDetailsArray!=0){
+            totalContacts++;
+            return totalContacts;
+        }
+    }
+    contactDetailsArray.reduce(findTotalConnection,1);
+    console.log("Total connections: "+totalContacts);
 
 }catch(e){
     console.log(e);
