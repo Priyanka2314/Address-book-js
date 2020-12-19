@@ -155,14 +155,26 @@ try{
     //UC6 find number of contacts in the address book
     let totalContacts=0;
     function findTotalConnection(contactDetailsArray){
-        if(contactDetailsArray!=0){
+        if(contactDetailsArray!=0)
             totalContacts++;
-            return totalContacts;
-        }
+        return totalContacts;  
     }
     contactDetailsArray.reduce(findTotalConnection,1);
     console.log("Total connections: "+totalContacts);
-
+    //UC7 check for duplicate entry
+    let dulicateCount=0;
+    function checkDuplicate(contact){
+        if(contactDetailsArray.firstName == "Priyanka")
+            dulicateCount++;
+        return dulicateCount;  
+    }
+    //using foreach checking duplicate contact 
+    contactDetailsArray.forEach((contact) => checkDuplicate(contact));
+    if(dulicateCount ==1)
+        console.log("Not duplicate");
+    else
+        console.log("Duplicate contact");
+    
 }catch(e){
     console.log(e);
 }
