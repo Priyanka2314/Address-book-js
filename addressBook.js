@@ -174,6 +174,39 @@ try{
         console.log("Not duplicate");
     else
         console.log("Duplicate contact");
+
+    //UC8 search person using city or state
+    //using city
+    let noOfCity = 0;
+    let noOfState = 0;
+    console.log("Contact by City");
+    function contactByCity(details){
+        if(details.city=="Sonbhadra"){
+            console.log(details.toString());
+            noOfCity++;
+        }
+    }
+    contactDetailsArray.filter(contactByCity);
+    console.log("Contacts by city: "+noOfCity);
+    
+    //by state
+    
+    let stateContact = contactDetailsArray.filter((contact) => contact.state.includes("MadheyPradesh"));
+    console.log(stateContact.toString());
+    function contactByState(details){
+        if(details.state=="UttarPradesh"){
+            console.log(details.toString());
+                noOfState++;
+            }
+    }
+    contactDetailsArray.filter(contactByState);
+    console.log("Contacts by State: "+noOfState);
+    
+    
+    
+
+    
+
     
 }catch(e){
     console.log(e);
