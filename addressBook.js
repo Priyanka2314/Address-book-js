@@ -174,18 +174,14 @@ try{
         console.log("Not duplicate");
     else
         console.log("Duplicate contact");
-    //UC9 view person by State or City using map
-    function cityMap(contacts){
-        return contacts.city+ " ==> " + contacts.firstName+" "+contacts.lastName;
-    }
-    let viewContactByCity =contactDetailsArray.map(cityMap);
-    console.log("Contact details by city : "+viewContactByCity);
-   //by state
-    function stateMap(contacts){
-        return contacts.state+ " ==> " + contacts.firstName+" "+contacts.lastName;
-    }
-    let viewContactByState =contactDetailsArray.map(stateMap);
-    console.log("Contact details by state : "+viewContactByState);
+    
+    //UC8 search person using city or state
+    //using city
+    console.log(" ");
+    let byCity = contactDetailsArray.filter((contact) => contact.city.includes("Sonbhadra"));
+    let stateContact = contactDetailsArray.filter((contact) => contact.state.includes("MadheyPradesh"));
+    console.log(stateContact.toString());
+
     
 }catch(e){
     console.log(e);
