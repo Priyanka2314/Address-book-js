@@ -191,7 +191,6 @@ try{
     console.log("Contacts by city: "+noOfCity);
 
     //by state
-
     let stateContact = contactDetailsArray.filter((contact) => contact.state.includes("MadheyPradesh"));
     console.log(stateContact.toString());
     function contactByState(details){
@@ -215,7 +214,17 @@ try{
     }
     let viewContactByState =contactDetailsArray.map(stateMap);
     console.log("Contact details by state : "+viewContactByState);
-    
+
+    //UC11 sorting by name
+    function sortByName(){
+        for(let contactdetails in contactDetailsArray){
+            contactDetailsArray.sort(contactdetails.firstName);
+        }
+        contactDetailsArray.forEach((contact) => console.log(contact.toString()));
+    }
+    console.log("Sorting by name: ");
+    sortByName();
+
 }catch(e){
     console.log(e);
 }
