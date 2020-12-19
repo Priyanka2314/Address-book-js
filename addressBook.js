@@ -136,6 +136,17 @@ try{
     //printing array
     contactDetailsArray.forEach((details) => console.log(details.toString()));
 
+    //UC4 find existing contact person using their name and edit it
+
+    //finding index using the name
+    console.log("=============================");
+    let pos = contactDetailsArray.findIndex(contact => contact.firstName == "Prashant");
+    //updating the contact details
+    contactDetailsArray[pos].phoneNo ="91 7095670775";
+
+    //displaying contactdetails after being updated
+    contactDetailsArray.forEach((updated) => console.log(updated.toString()));
+
 }catch(e){
     console.log(e);
 }
