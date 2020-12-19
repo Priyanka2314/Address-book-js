@@ -175,13 +175,46 @@ try{
     else
         console.log("Duplicate contact");
     
-    //UC8 search person using city or state
+    //UC8 search person using city or state & UC10 -> number of contacts by city or state
     //using city
     console.log(" ");
-    let byCity = contactDetailsArray.filter((contact) => contact.city.includes("Sonbhadra"));
+    let noOfCity = 0;
+    let noOfState = 0;
+    console.log("Contact by City");
+    function contactByCity(details){
+        if(details.city=="Sonbhadra"){
+            console.log(details.toString());
+            noOfCity++;
+        }
+    }
+    contactDetailsArray.filter(contactByCity);
+    console.log("Contacts by city: "+noOfCity);
+
+    //by state
+
     let stateContact = contactDetailsArray.filter((contact) => contact.state.includes("MadheyPradesh"));
     console.log(stateContact.toString());
+    function contactByState(details){
+        if(details.state=="UttarPradesh"){
+            console.log(details.toString());
+                noOfState++;
+            }
+    }
+    contactDetailsArray.filter(contactByState);
+    console.log("Contacts by State: "+noOfState);
 
+    //UC9 view person by State or City using map
+    function cityMap(contacts){
+        return contacts.city+ " ==> " + contacts.firstName+" "+contacts.lastName;
+    }
+    let viewContactByCity =contactDetailsArray.map(cityMap);
+    console.log("Contact details by city : "+viewContactByCity);
+   //by state
+    function stateMap(contacts){
+        return contacts.state+ " ==> " + contacts.firstName+" "+contacts.lastName;
+    }
+    let viewContactByState =contactDetailsArray.map(stateMap);
+    console.log("Contact details by state : "+viewContactByState);
     
 }catch(e){
     console.log(e);
