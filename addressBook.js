@@ -148,7 +148,7 @@ try{
     contactDetailsArray.forEach((updated) => console.log(updated.toString()));
 
     //UC5 to find a person with name and delete it from array
-    console.log("====================================");
+    console.log("===================================");
     contactDetailsArray.splice(pos,1);
     contactDetailsArray.forEach((contact) => console.log("contact after being deleted: "+contact.toString()));
 
