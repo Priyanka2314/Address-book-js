@@ -130,7 +130,7 @@ try{
     let contactDetailsArray = new Array();
     contactDetailsArray.push(new AddressBook("Praveen","Singh","Bina","Sonbhadra","UttarPradesh","231220", "91 9879504273","praveen@gmail.com"));
     contactDetailsArray.push(new AddressBook("Prashant","Singh","Rewa","Rewa","MadheyPradesh","486001", "91 8879504273","prashant@gmail.com"));
-    contactDetailsArray.push(new AddressBook("Grijesh","Gautam","MaharajGanj","Gorakhpur","UttarPradesh","273001", "91 8589504273","grijesh@gmail.com"));
+    contactDetailsArray.push(new AddressBook("Grijesh","Gautam","MaharajGanj","Gorakhpur","UttarPradesh","273006", "91 8589504273","grijesh@gmail.com"));
     contactDetailsArray.push(new AddressBook("Ankur","Yadav","Banaras","Varanasi","UttarPradesh","231233", "91 7779504273","ankur@gmail.com"));
 
     //printing array
