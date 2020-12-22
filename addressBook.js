@@ -191,7 +191,7 @@ try{
     console.log("Contacts by city: "+noOfCity);
 
     //by state
-    let stateContact = contactDetailsArray.filter((contact) => contact.state.includes("MadheyPradesh"));
+    let stateContact = contactDetailsArray.filter((contact) => contact.state.includes("MadheyPradesh"))
     console.log(stateContact.toString());
     function contactByState(details){
         if(details.state=="UttarPradesh"){
@@ -224,6 +224,33 @@ try{
     }
     console.log("Sorting by name: ");
     sortByName();
+
+    //UC12 - Sorting person by city , state or zip
+    function sortByCity(){
+        for(let contactdetails in contactDetailsArray){
+            contactDetailsArray.sort(contactdetails.city);
+        }
+        contactDetailsArray.forEach((contact) => console.log(contact.toString()));
+    }
+    function sortByState(){
+        for(let contactdetails in contactDetailsArray){
+            contactDetailsArray.sort(contactdetails.state);
+        }
+        contactDetailsArray.forEach((contact) => console.log(contact.toString()));
+    }
+    function sortByZip(){
+        for(let contactdetails in contactDetailsArray){
+            contactDetailsArray.sort(contactdetails.zip);
+        }
+        contactDetailsArray.forEach((contact) => console.log(contact.toString()));
+    }
+
+    console.log("Sorting by City: ");
+    sortByCity();
+    console.log("Sorted by State :");
+    sortByState();
+    console.log("Sorted by Zip Code: ");
+    sortByZip();
 
 }catch(e){
     console.log(e);
